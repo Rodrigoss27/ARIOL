@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="./css/css.css"> 
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="pic/blind.png" />
+<title>
+    Projeto EXPOTEC - Ariol 
+</title>
+</head>
+  <body>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#" style="letter-spacing: 5px; margin-left: 10px;">ARIOL</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#"> Função <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">Adicionais</a>
+            </div>
+          </div>
+          </nav>
+    <div class="body">
+    <div class="fundo1">
+      <div class="texto">
+          <h1>Já percebeu o quanto a nossa tecnologia pode ajudar os mais necessitados?</h1>
+          <br><br><div class="paragrafo">
+          <span>Veja mais sobre o nosso trabalho logo abaixo e entenda mais sobre ele e o assunto abordado.</span></div>
+          <br>
+      </div>    
+    </div>
+    </div>
+  </div>
+  <br><br><br>
+    <div class="fundo2" id="paragrafo2"><center>
+    <ul class="text" style="cursor: default;">
+        <li>A</li>
+        <li class="ghost">j</li>
+        <li class="ghost">u</li>
+        <li class="ghost">d</li>
+        <li class="ghost">a</li>
+        <li class="ghost">n</li>
+        <li class="ghost">t</li>
+        <li class="ghost">e</li>
+        <li class="spaced">R</li>
+        <li class="ghost">e</li>
+        <li class="ghost">s</li>
+        <li class="ghost">p</li>
+        <li class="ghost">o</li>
+        <li class="ghost">n</li>
+        <li class="ghost">s</li>
+        <li class="ghost">a</li>
+        <li class="ghost">v</li>
+        <li class="ghost">e</li>
+        <li class="ghost">l</li>
+        <li class="spaced">I</li>
+        <li class="ghost">n</li>
+        <li class="ghost">t</li>
+        <li class="ghost">e</li>
+        <li class="ghost">l</li>
+        <li class="ghost">i</li>
+        <li class="ghost">g</li>
+        <li class="ghost">e</li>
+        <li class="ghost">n</li>
+        <li class="ghost">t</li>
+        <li class="ghost">e</li>
+        <li class="spaced">O</li>
+        <li class="ghost">r</li>
+        <li class="ghost">i</li>
+        <li class="ghost">e</li>
+        <li class="ghost">n</li>
+        <li class="ghost">t</li>
+        <li class="ghost">a</li>
+        <li class="ghost">d</li>
+        <li class="ghost">o</li>
+        <li class="ghost">r</li>
+        <li class="ghost">&nbsp;</li>
+        <li class="ghost">p</li>
+        <li class="ghost">a</li>
+        <li class="ghost">r</li>
+        <li class="ghost">a</li>
+        <li class="spaced">L</li>
+        <li class="ghost">o</li>
+        <li class="ghost">c</li>
+        <li class="ghost">o</li>
+        <li class="ghost">m</li>
+        <li class="ghost">o</li>
+        <li class="ghost">ç</li>
+        <li class="ghost">ã</li>
+        <li class="ghost">o</li>
+      </ul>
+    </div>
+    <div class="center">
+        <img src="pic/cego.png" width="500">
+        <p id="text">"A.R.I.O.L. é um dispositivo tecnológico novo e diferente que propõe a deficientes visuais uma forma mais confortável de andar pelas ruas"</p>
+    </div>
+  
+</body>
+<script>
+   $(function() {
+   var text = $(".text");
+   $(window).scroll(function() {
+   var scroll = $(window).scrollTop();
+
+    if (scroll >= 800) {
+      text.removeClass("hidden");
+    } else {
+      text.addClass("hidden");
+    }
+    });
+    });
+  
+    var text = document.getElementById('text');
+            var newDom = '';
+            var animationDelay = 2;
+    
+            for(let i = 0; i < text.innerText.length; i++)
+            {
+                newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+            }
+    
+            text.innerHTML = newDom;
+            var length = text.children.length;
+    
+            for(let i = 0; i < length; i++)
+            {
+                text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+            }
+
+</script>
